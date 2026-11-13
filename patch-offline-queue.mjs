@@ -104,9 +104,9 @@ const offlineQueuePatch = `    ${mark}
 
 replaceOnce(originalPreviewHandler, offlineQueuePatch, 'offline preview handler');
 replaceOnce(
-  "            logger.info(`handled ${offlineNotifs} offline messages/notifications`);",
-  "            logger.info(`handled ${offlineNotifs} offline messages/notifications`);\n" +
-    '            stopOfflineBatchWatchdog();',
+  "        logger.info(`handled ${offlineNotifs} offline messages/notifications`);",
+  "        logger.info(`handled ${offlineNotifs} offline messages/notifications`);\n" +
+    '        stopOfflineBatchWatchdog();',
   'offline queue completion',
 );
 
